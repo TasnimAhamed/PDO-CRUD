@@ -1,0 +1,677 @@
+/*Google Font -> Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    position: relative;
+    min-height:100vh;
+    width: 100%;
+    background:#E5E8EF;
+}
+
+/*Helper CSS*/
+.p-4{
+    padding: 20px;
+}
+.mb-4{
+    margin-bottom: 20px;
+}
+.mt-1{
+    margin-top: 5px;
+}
+.custom_btn{
+    margin-left: 12px;
+}
+.btn_custom{
+    background:red;
+    margin-top: 5px;
+}
+.btn_custom:hover{
+    background:red;
+}
+/*Helper CSS*/
+.sidebar{
+    position: fixed;
+    height:100%;
+    width: 258px;
+    top: 0;
+    left: 0;
+    background:#133159;
+    padding:8px 16px;
+    transition: all 0.5s ease;
+}
+.sidebar.active{
+    width:78px;
+}
+.sidebar .logo_content {
+    margin-top: 12px;
+}
+.sidebar .logo_content .logo{
+    color: #fff;
+    display: flex;
+    height:50px;
+    width:100%;
+    align-items: center;
+}
+.sidebar .logo_content .logo img{
+    margin:0 8px;
+    height:45px;
+    width:45px;
+    object-fit:cover;
+    transition: all 0.5s ease;
+}
+.sidebar.active .logo_content .logo img{
+    margin-left:0px;
+}
+
+.sidebar .logo_content .logo .logo_name{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    transition: all 0.5s ease;
+}
+.sidebar.active .logo_content .logo .logo_name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.logo_content .logo .logo_name{
+   font-size:20px;
+   font-weight: 400;
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+.sidebar ul li{
+    position: relative;
+    height:52px;
+    width:100%;
+    list-style:none;
+    line-height:50px;
+}
+.sidebar ul li a{
+    padding: 0 12px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 0px;
+    border-radius: 12px;
+    transition:0.4s ease;
+
+}
+.sidebar.active ul li a{
+    border-radius: 50%;
+}
+.sidebar.active .link_name{
+    transition:all 0.5s ease;
+}
+.sidebar.active .link_name{
+    opacity:0;
+    pointer-events: auto;
+}
+.sidebar ul li #toggleBtn{
+    color: #3C7EF3;
+    padding-left:12px;
+    font-size: 30px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.sidebar ul li a:hover{
+    background: #3C7EF3;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.sidebar ul li a i{
+    height:50px;
+    min-height:50px;
+    border-radius:12px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 10px;
+}
+.home_content{
+    position: absolute;
+    height:100%;
+    width: calc(100% - 258px)!important;
+    left: 258px;
+    transition:all 0.5s ease;
+}
+.sidebar.active ~ .home_content{
+    width: calc(100% - 78px)!important;
+    left: 78px;
+}
+
+
+/*Side Nav End*/
+
+
+/*Top Nav Start*/
+.topNav{
+    background:#133159;
+    color: #fff;
+    padding: 20px 40px 20px 0px;
+    min-height:88px;
+    width:100%;
+}
+.list-inline{
+    padding-left:0;
+    list-style:none
+}
+.list-inline-item{
+    display:inline-block
+}
+.nav_content .list-inline-item:not(:last-child){
+    margin-right:22px;
+}
+
+.nav_content ul{
+    display:flex;
+    align-items: center;
+}
+.nav_content ul li.search{
+    position: relative;
+    background: #E5E8EF;
+    box-shadow: inset -4px -4px 2px #FFFFFF, inset 4px 4px 2px rgba(8, 20, 36, 0.1);
+    border-radius: 10px;
+    margin-right: 75px!important;
+}
+.nav_content ul li .call,
+.nav_content ul li .add,
+.nav_content ul li .notification,
+.nav_content ul li .question
+{
+    background: #3C7EF3;
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+}
+.nav_content ul li .question{
+    display:inline-block;
+    font-size:20px;
+    margin-bottom: 2px;
+}
+.nav_content ul li .call{
+    background: #68EBCA;
+}
+.nav_content ul li.notifications{
+    position: relative;
+}
+.nav_content ul li.notifications span{
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: red;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 10px;
+}
+.nav_content ul li input{
+    border-bottom:0!important;
+    width:300px!important;
+    height:38px!important;
+    padding: 2px 15px!important;
+    margin: 0px!important;
+}
+.nav_content ul li input::placeholder{
+    color:#546376;
+}
+.nav_content ul li input:focus{
+    box-shadow: none!important;
+}
+.nav_content ul li.search i{
+    position:absolute;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    color:#133159;
+}
+.nav_content ul li .profile_content .profile{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.nav_content ul li .profile_content .profile img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nav_content ul li .profile_content .profile .profile_name h4{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0!important;
+}
+.nav_content ul li .profile_content .profile .profile_name p{
+    font-size: 12px;
+}
+.nav_content ul li .profile_content .profile i{
+    margin-left: 0!important;
+    transform: rotate(90deg);
+}
+.nav_content ul li:last-child{
+    margin-left: 40px;
+}
+/*Top Nav End*/
+
+/*Main Content*/
+.main_content{
+    margin: 28px 25px;
+    min-width: calc(100% - 1602px);  
+    background:#fff;
+    border-radius:12px;
+    padding: 20px;
+}
+
+/*Deal Content Start*/
+.deal_content{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom: 1px solid #E5E8EF;
+    padding-bottom: 15px;
+}
+.deal_content p{
+    font-weight: 500;
+    font-size: 24px;
+    color: #333333;
+}
+.deal_content ul{
+    display: flex;
+    align-items: center;
+}
+.deal_content ul .list-inline-item:not(:last-child){
+    margin-right:4px;
+}
+.deal_content ul li:first-child,
+.deal_content ul li:nth-child(2),
+.deal_content ul li:nth-child(3),
+.deal_content ul li:nth-child(4){
+    width:56px;
+    height:56px;
+    background: #F6F7FB;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+}
+.deal_content ul li:first-child a i,
+.deal_content ul li:nth-child(2) a i,
+.deal_content ul li:nth-child(3) a i,
+.deal_content ul li:nth-child(4) a i{
+    margin-top: 10px;
+    font-size: 30px;
+    color: #546376;
+}
+.deal_content ul li.gradient{
+    background: #133159;
+    color:#fff;
+}
+.deal_content ul li.gradient a i{
+    color:#fff;
+}
+.deal_content ul li.createBtn,
+.deal_content ul li.settingBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:0px 20px;
+    
+}    
+.deal_content ul li.createBtn a,
+.deal_content ul li.settingBtn a{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: #3C7EF3;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height:24px;
+}
+.deal_content ul li.createBtn a i,
+.deal_content ul li.settingBtn a i{
+    background: #fff;
+    border-radius: 50%;
+    color: #3C7EF3;
+    text-align: center;
+    padding: 5px;
+    margin-right: 8px!important;
+}
+.deal_content ul li.eye{
+    margin-left: 15px;
+}
+
+.deal_content ul li.eye a{
+    display: flex;
+    color: #546376;
+    border:1px solid #546376;
+    border-radius: 50%;
+    padding:14px;
+}
+
+/*Deal Content End*/
+
+/*Deal Detail Start*/
+select{
+    display:block;
+}
+.deal_detail{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0px;
+    border-bottom: 1px solid #E5E8EF;
+    align-items:center;
+}
+.deal_detail_left ul li:first-child select,
+.deal_detail_left ul li:nth-child(2) select,
+.deal_detail_left ul li:nth-child(3) input{
+    border: 1px solid #546376;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height:42px;
+    padding:0px 12px;
+    margin-right: 15px;
+}
+.deal_detail_left ul li:first-child select{
+    width: 300px !important;
+}
+.deal_detail_left ul{
+    display: flex;
+    position: relative;
+}
+.deal_detail_left ul li:nth-child(2) select{
+    width: 125px !important;
+}
+.deal_detail_left ul li:nth-child(3) input{
+    width:72px;
+    margin-bottom: 0!important;
+}
+.deal_detail_left ul li.date{
+    position: relative;
+    z-index: 1;
+}
+
+.deal_detail_left ul li.date i.calender{
+    position: absolute;
+    left: 8px;
+    top: 9px;
+}
+.deal_detail_left ul li:last-child i.chevron_right{
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    z-index: 0;
+    transform: rotate(90deg);
+    font-size: 30px;
+}
+.deal_detail_right {
+    position: relative;
+}
+.deal_detail_right input{
+    width: 270px!important;
+    border: 1px solid #546376!important;
+    padding: 0px 15px!important;
+    border-radius: 30px!important;
+    height:42px!important;
+}
+.deal_detail_right input::placeholder{
+   color: #A6ACBE;
+   font-size:17px;
+}
+.deal_detail_left ul li select:focus,
+.deal_detail_right input:focus{
+    box-shadow: none!important;
+    outline: 0 !important;
+}
+.deal_detail_right i{
+    position: absolute;
+    color: #133159;
+    font-size: 25px;
+    top: 10px;
+    right: 17px;
+}
+::-webkit-datetime-edit-fields-wrapper {
+    display:none;
+    width: 0 !important;;
+  }
+  ::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+/*Deal Detail End*/
+.deal_value{
+    padding:15px 0px;
+}
+.deal_value h1{
+    font-weight: 400;
+    line-height: 24px;    
+    color: #333333;
+    font-size: 16px;
+    margin: 0 !important;
+}
+
+/*Dealer Detail Start*/
+.dealer_detail{
+    background: #F6F7FB;
+    padding:15px;
+    border-radius: 10px;
+}
+.dealer_detail >.row{
+    margin:0;
+}
+.dealer-summery{
+    background:#3c7ef31a;
+    border-radius:10px;
+    padding: 12px 8px;
+    margin-bottom: 15px;
+}
+.dealer-summery > .row {
+    margin-bottom: 0!important;
+}
+.ds_single{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 12px;
+}
+.ds_name h5
+{
+    margin: 0!important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+.ds_name .ds_num,
+.ds_name .ds_price
+{    margin: 0!important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: inline-block;
+}
+.ds_name .ds_num
+{    color: #8896A8;
+    padding-right: 20px;
+}
+.ds_name .ds_num::after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #8896A8;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.ds_name .ds_price{
+    color:#133159;
+}
+.ds_single .ds_icon i{
+    background: #3C7EF3;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 8px;
+    color: #fff;
+}
+/*Dealer Detail End*/
+
+/*Dealer Info Summery Start*/
+.dealer_info_summery{
+    background-color: #f0f2f7;
+    padding: 8px;
+    border: 1px solid #f0f2f7;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.dealer_info{
+    padding: 14px;
+    background:#fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.dealer_info:last-child{
+    margin-bottom: 0px;
+}
+.dealer_info h6{
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    margin: 0;
+}
+.dealer_info h6 span{
+    font-size: 16px;
+    line-height: 22px;
+    color: #3C7EF3;
+}
+.dealer_info p{
+    font-size: 16px;
+    line-height: 24px;
+    color:  #8896A8;
+    margin:5px 0px
+}
+.add_dealer_info{
+    background:#fff;
+    min-height:478px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    border-radius:10px;
+}
+.add_dealer_info h6{
+    color: #8896A8;
+    margin:0 0 15px 0;
+}
+.add_dealer_info a{
+    display: flex;
+    align-items: center;
+    color: #546376;
+    font-size:16px;
+}
+.add_dealer_info a i{
+    background: #3C7EF3;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 6px;
+    color: #fff;
+    margin-right: 6px;
+}
+.d_contact-info{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.social_icons ul li{
+    margin-right: 4px;
+}
+.social_icons ul li a{
+    color: #546376;
+    display:inline-block;
+    width:25px;
+    height: 25px;
+    border-radius:50%;
+    border:1px solid #546376;
+    text-align: center;
+}
+.social_icons ul li a i{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.dealer_info_summery >.row{
+    margin-bottom: 0!important;
+}
+.d_contact-info .more_icon{
+    width:25px;
+    height: 25px;
+    border-radius:50%;
+    color: #fff;
+    background-color:#133159;
+    text-align: center;
+}
+.d_contact-info .more_icon i{
+   margin-left: 1px;
+}
+/*Dealer Info Summery End*/
+.deal_btn > .row{
+    margin-bottom: 0;
+}
+.delete_btn a,
+.won_btn a,
+.lost_btn a,
+.pipeline_btn a{
+    width:100%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+}
+.delete_btn a{
+    color: #FF5858;
+    border:1px solid #FF5858;
+}
+.won_btn a{
+    color: #6FCF97;
+    border:1px solid #6FCF97;
+}
+.lost_btn a{
+    color: #FF5858;
+    border:1px solid #FF5858;
+}
+.pipeline_btn a{
+    color: #FFB053;
+    border:1px solid #FFB053;
+}
+.delete_btn a i.left,
+.won_btn a i.left,
+.lost_btn a i.left{
+    margin-right: 6px!important;
+}
+
+/*Main Content*/

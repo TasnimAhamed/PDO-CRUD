@@ -1,0 +1,176 @@
+@media (min-width:992px) and (max-width:1199px) {
+     .sidebar{
+        width: 210px;
+    }
+    .home_content{
+        width: calc(100% - 210px)!important;
+        left: 210px;
+    }
+    .topNav {
+        padding-top: 18px;
+        min-height: 78px;
+    }
+    .main_content {
+        padding: 10px;
+    }
+    .deal_content ul li.createBtn a, .deal_content ul li.settingBtn a {
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+    .deal_content ul li.createBtn a i, .deal_content ul li.settingBtn a i {
+        padding: 2px;
+        margin-right: 6px!important;
+    }
+    .deal_content ul li:first-child, .deal_content ul li:nth-child(2), .deal_content ul li:nth-child(3), .deal_content ul li:nth-child(4) {
+        width: 45px;
+        height: 45px;
+    }
+    .deal_content ul li:first-child a i, .deal_content ul li:nth-child(2) a i, .deal_content ul li:nth-child(3) a i, .deal_content ul li:nth-child(4) a i {
+        margin-top: 6px;
+        font-size: 26px;
+    }
+    .deal_content ul li.createBtn, .deal_content ul li.settingBtn {
+        margin: 0px 10px;
+    }
+    .deal_content ul li.eye a {
+        padding: 8px;
+    }
+    .deal_content ul li.eye {
+        margin-left: 8px;
+    }
+       
+    .nav_content ul li.search {
+        margin-right: 30px!important;
+        height:40px;
+    }
+    .nav_content ul li .call, .nav_content ul li .add, .nav_content ul li .notification, .nav_content ul li .question {
+        width: 40px;
+        height: 40px;
+        padding-top: 9px;
+    }
+    .nav_content ul li:last-child {
+        margin-left: 10px;
+    }
+    .nav_content ul li input {
+        width: 150px!important;
+        padding-top: 0px!important;
+    }
+    .deal_detail_left ul li:first-child select {
+        width: 150px!important;
+    }
+    .deal_detail_right input{
+        width:160px!important;
+        margin-bottom: 0px!important;
+    }
+    .main_content{
+        margin: 20px 20px; 
+    } 
+    .dealer_info {
+        padding: 10px;
+    }
+    .dealer_info p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    .social_icons ul{
+        padding-right: 15px;
+    } 
+    .social_icons ul li{
+        margin-right: 8px;
+        margin-bottom: 5px;
+    }
+    .ds_single{
+        padding: 0;
+    }
+    .ds_single .ds_icon i {
+        width: 33px;
+        height: 33px;
+        padding-top: 4px;
+    } 
+}
+@media (min-width:1200px) and (max-width:1399px) {
+     .sidebar{
+        width: 225px;
+        padding:8px 14px;
+    }
+     .sidebar ul li{
+        height:40px;
+    }
+    .home_content{
+        width: calc(100% - 225px)!important;
+        left: 225px;
+    }
+    .add_dealer_info{
+        min-height:590px;
+    }
+    .nav_content ul li.search {
+        margin-right: 45px!important;
+    }
+    .nav_content ul li:last-child {
+        margin-left: 15px;
+    }
+    .nav_content ul li input {
+        width: 250px!important;
+    }
+    .deal_detail_left ul li:first-child select {
+        width: 240px!important;
+    }
+    .deal_detail_right input{
+        width:230px!important;
+        margin-bottom: 0px!important;
+    }
+    .main_content{
+        margin: 20px 20px; 
+    } 
+    .dealer_info {
+        padding: 10px;
+    }
+    .dealer_info p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    .social_icons ul{
+        max-width: 125px;
+    } 
+    .social_icons ul li{
+        margin-right: 5px;
+        margin-bottom: 5px;
+    } 
+}
+@media (min-width:1400px) and (max-width:1599px) {
+    .sidebar{
+        width: 225px;
+    }
+    .home_content{
+        width: calc(100% - 225px)!important;
+        left: 225px;
+    }
+    .main_content{
+        margin: 22px 22px;
+        /* min-width: calc(100% - 1602px);   */
+    }
+    .dealer_info{
+        padding: 8px;
+    }
+    .social_icons ul li{
+        margin-right: 2px;
+    }
+}
+@media (min-width:1600px) and (max-width:1799px) {
+    .sidebar{
+        width: 235px;
+    }
+    .home_content{
+        width: calc(100% - 235px)!important;
+        left: 235px;
+    }
+    /* .main_content{
+        margin: 28px 25px;
+        min-width: calc(100% - 1602px);  
+    } */
+}
+@media (min-width:1800px) {
+
+}
